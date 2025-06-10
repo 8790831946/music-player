@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="stylemu.css">
+</head>
+<body>
+  <div class="music-player">
+    <h2 id="title">Loading...</h2>
+    <p id="artist">Artist</p>
+    <audio id="audio" preload="metadata"></audio>
+
+    <input type="range" id="progress" value="0">
+    <div>
+      <button onclick="prevSong()">⏮</button>
+      <button onclick="togglePlay()">▶</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+
+    <div>
+      <label>Volume</label>
+      <input type="range" id="volume" min="0" max="1" step="0.01">
+    </div>
+
+    <ul id="playlist"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
